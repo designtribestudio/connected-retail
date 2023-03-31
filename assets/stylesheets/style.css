@@ -123,3 +123,12 @@ img {
 .c-left img{
     width: 750px;
 }
+
+.c-domains-container{
+    padding: 200px 0;
+}
+
+.c-domains, .c-domains img{
+    width: 1252px;
+    margin: 0 auto;
+}
