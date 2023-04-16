@@ -4,12 +4,18 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-img {
-    -webkit-user-select: none !important;
-    -khtml-user-select: none !important;
-    -moz-user-select: none !important;
-    -o-user-select: none !important;
-    user-select: none !important;
+nav{
+    padding: 17.5px 0;
+    width: 100vw;
+    background: #FFFFFF;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+position: fixed;
+z-index: 10;
+}
+
+nav .nav-img{
+    width: fit-content;
+    margin: 0 auto;
 }
 
 .hero-container {
@@ -22,7 +28,7 @@ img {
 .hero {
     max-width: 1252px;
     margin: 0 auto;
-    padding: 88px 0;
+    padding: 155px 0 30px 0;
     text-align: center;
 }
 
@@ -247,12 +253,50 @@ img {
 
 .main-grid .vector{
     position: absolute;
+    width: 890px;
     top: -25px;
     left: 70px;
     transform: rotate(-0.7deg);
     z-index: 2;
 }
 
+.vector-container{
+    animation: grow 3s linear;
+    height: fit-content;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+@keyframes grow {
+
+    0%{
+        width: 0px;
+        margin: 0 auto;
+    }
+
+    100%{
+        width: 890px;
+        margin: 0 auto;
+    }
+    
+}
+
+.vector-container img{
+    width: 890px;
+    animation: sliding 3s linear;
+}
+
+/* animations: "grow" and "sliding" must have same time to achieve desired final animation */
+
+@keyframes sliding {
+    0%{
+        margin-left: -445px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+    
+}
 .outer-container {
     margin: 0 auto;
     position: relative;
@@ -762,3 +806,73 @@ color: #FFFFFF;
     z-index: 5;
 }
 
+footer{
+    width: 100vw;
+    background: linear-gradient(97.35deg, rgba(76, 159, 158, 0.79) 20.76%, rgba(66, 69, 103, 0.82) 90.37%);
+    padding: 72px 0;
+    position: relative;
+}
+
+.footer{
+    width: 1040px;
+    margin: 0 auto;
+}
+
+.footer h1{
+    font-weight: 600;
+font-size: 36px;
+line-height: 44px;
+/* identical to box height */
+
+letter-spacing: -0.02em;
+
+color: #FFFFFF;
+}
+
+.footer p{
+    max-width: 617px;
+    font-weight: 400;
+font-size: 16px;
+line-height: 20px;
+/* or 125% */
+
+
+color: #FFFFFF;
+padding: 0;
+margin: 24px 0 34px 0;
+}
+
+.footer button{
+    padding: 16px 24px;
+gap: 10px;
+border: none;
+width: 154px;
+height: 56px;
+
+background: #FFFFFF;
+border-radius: 42px;
+font-weight: 600;
+font-size: 20px;
+line-height: 24px;
+text-align: right;
+
+color: #000000;
+cursor: pointer;
+}
+
+.footer a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.footer button:hover {
+    background: #3374E2;
+    color: #ffffff;
+}
+
+footer::after{
+    content: url('../images/footer-wm.svg');
+    position: absolute;
+    top: -20px;
+    right: 0;
+}
