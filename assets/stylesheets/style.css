@@ -473,6 +473,7 @@ nav .nav-img {
     justify-content: space-between;
 }
 
+
 .learn-more {
     position: relative;
     z-index: 3;
@@ -517,6 +518,11 @@ nav .nav-img {
 .right {
     position: relative;
     left: 10px;
+}
+
+.right .learn-more{
+    margin-top: 45px;
+    margin-left: 5px;
 }
 
 .left {
