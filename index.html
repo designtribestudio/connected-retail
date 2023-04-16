@@ -18,11 +18,10 @@
         <div class="nav-img">
             <img draggable="false" src="./assets/images/header-img.svg" alt="">
         </div>
-        
+
     </nav>
     <div class="hero-container">
         <div class="hero">
-            <!-- <img draggable="false" src="./assets/images/symphai-logo.svg" alt=""> -->
             <h1>Connected Solutions for Smarter Retail</h1>
             <p>We deliver the broadest suite of integrated AI-powered solutions for Retail and CPG</p>
             <div class="grad">
@@ -35,7 +34,7 @@
             </div>
 
             <div class="main">
-                <div class="learn-more">
+                <div class="learn-more" id="lm1">
                     <div class="name">CATEGORY PLANNING</div>
                     <div class="goto-container">
                         <a class="goto" href="https://www.symphonyretailai.com/category-planning/">
@@ -74,7 +73,7 @@
                                 </div>
                             </span>
                         </div>
-                        <div class="learn-more">
+                        <div class="learn-more" id="lm2">
                             <div class="name">SUPPLY CHAIN</div>
                             <div class="goto-container">
                                 <a class="goto" href="https://www.symphonyretailai.com/supply-chain/">
@@ -102,7 +101,7 @@
                     </div>
 
                     <div class="right">
-                        <div class="learn-more">
+                        <div class="learn-more" id="lm3">
                             <div class="name">STORE INTELLIGENCE</div>
                             <div class="goto-container">
                                 <a class="goto" href="https://www.symphonyretailai.com/cpg/">
@@ -136,7 +135,7 @@
                     </div>
                 </div>
 
-                <div class="learn-more">
+                <div class="learn-more" id="lm3">
                     <div class="name">CUSTOMER-CENTRIC RETAILING</div>
                     <div class="goto-container">
                         <a class="goto" href="https://www.symphonyretailai.com/revenue-growth/">
@@ -228,14 +227,14 @@
     <footer>
         <div class="footer">
             <h1>Let’s talk about future of Retail</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.</p>
             <a href="https://www.symphonyretailai.com/contact/"><button>Contact us</button></a>
         </div>
     </footer>
     <script>
         function LeftToggle() {
             var leftMore = document.getElementById("leftMore");
-            var liim = document.getElementById("liim");
             var tp1 = document.getElementById("tp1");
             if (leftMore.className == 'not-active') {
                 leftMore.className = 'active';
@@ -251,7 +250,6 @@
 
         function RightToggle() {
             var rightMore = document.getElementById("rightMore");
-            var riim = document.getElementById("riim");
             var tp2 = document.getElementById("tp2");
             if (rightMore.className == 'not-active') {
                 rightMore.className = 'active';
@@ -263,15 +261,6 @@
                 rightMore.innerText = '+';
                 tp2.style.visibility = 'hidden';
             }
-
-            //    if (leftMore.style.display=='none'){
-            //     leftMore.style.display='block';
-            //     liim.style.height='84px';
-            //    }
-            //    else{
-            //     leftMore.style.display='none';
-            //     liim.style.height='64px';
-            //    }
         }
     </script>
 </body>
