@@ -339,15 +339,30 @@ border-radius: 24px;
     height: 131.25px;
     border: 2px dashed #00EAC3;
 border-radius: 16px;
-font-weight: 700;
-font-size: 16px;
-line-height: 19px;
-display: flex;
-align-items: center;
-text-align: center;
-    color: #FFFFFF;
+position: relative;
+z-index: 4;
 }
 
+.lii-more{
+    display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+height: 64px;
+transition: height 0.5s;
+position: absolute;
+bottom: 20px;
+}
+
+
+.l-inner-inner p{
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+ color: #ffffff;
+}
 .r-outer {
     display: flex;
     align-items: center;
@@ -373,13 +388,27 @@ text-align: center;
     height: 131.25px;
     border: 2px dashed #35224A;
     border-radius: 16px;
+    position: relative;
+    z-index: 4;
+}
+
+.rii-more{
+    display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
+height: 64px;
+transition: height 0.5s;
+position: absolute;
+bottom: 20px;
+}
+
+.r-inner-inner p{
+    margin: 0;
+    padding: 0;
     font-weight: 700;
 font-size: 16px;
 line-height: 19px;
-display: flex;
-align-items: center;
-text-align: center;
-
 color: #35224A;
 }
 
@@ -559,3 +588,177 @@ color: #FFFFFF;
     bottom: -55px;
     left: 108px;
 }
+
+#leftMore{
+    display: none;
+    font-size: 30px;
+    line-height: 30px !important;
+    color: #ffffff;  
+    padding: 0;
+    margin: 0;  
+}
+
+.l-inner-inner:hover #leftMore{
+    display: block;
+}
+
+.l-inner-inner:hover .lii-more{
+    height: 84px;
+}
+
+#rightMore{
+    display: none;
+    font-size: 30px;
+    line-height: 30px !important;
+    color: #35224A; 
+    padding: 0;
+    margin: 0;  
+}
+
+.r-inner-inner:hover #rightMore{
+    display: block;
+}
+
+.r-inner-inner:hover .rii-more{
+    height: 84px;
+}
+
+.l-inner-inner, .r-inner-inner{
+    cursor: pointer;
+}
+
+
+.tooltip .tooltiptext {
+    /* visibility: hidden; */
+    width: 360px;
+    background-color: #3374E2;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -60px;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #3374E2 transparent;
+  }
+
+  .tooltip .tooltiptext .tt{
+    /* visibility: hidden; */
+    width: 320px;
+    background-color: #ffffff;
+    color: #35224A;
+    text-align: center;
+    padding: 20px 20px;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 1px 1px 10px #888888;
+    /* top: 40%;
+    left: 50%;
+    margin-left: -60px; */
+  }
+  
+  .tooltip .tooltiptext .tt p{
+    font-weight: 300;
+    font-size: 12px;
+    padding: 0;
+    margin: 0;
+    line-height: 16px;
+  }
+
+  .tooltip .tooltiptext .tt::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+  }
+ 
+  /* .tooltip2 .tooltiptext {
+    width: 360px;
+    background-color: #3374E2;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+  }
+
+  .tooltip2 .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #3374E2 transparent transparent transparent;
+  }
+
+  .tooltip2 .tooltiptext .tt{
+    width: 300px;
+    background-color: #ffffff;
+    color: #35224A;
+    text-align: center;
+    padding: 20px 30px;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .tooltip2 .tooltiptext .tt::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #fff transparent transparent transparent;
+  } */
+
+.tooltip2 .tooltiptext{
+    transform: rotate(180deg);
+}
+ 
+.tooltip2 .tooltiptext .tt p{
+    transform: rotate(180deg);
+}
+
+#tp1{
+    visibility: hidden;
+    position: absolute;
+    bottom: 25px;
+    left: -38px;
+}
+
+#tp2{
+    visibility: hidden;
+    position: absolute;
+    top: 15px;
+    left: 125px;
+}
+
+#tp3{
+    display: none;
+    position: relative;
+    top: 30px;
+    left: -120px;
+    z-index: 5;
+}
+

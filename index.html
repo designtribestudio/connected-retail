@@ -31,7 +31,7 @@
                 <div class="learn-more">
                     <div class="name">CATEGORY PLANNING</div>
                     <div class="goto-container">
-                        <a class="goto" href="">
+                        <a class="goto" href="https://www.symphonyretailai.com/category-planning/">
                             <p>LEARN MORE</p> <img src="./assets/images/east.svg" alt="">
                         </a>
                     </div>
@@ -42,16 +42,30 @@
                     <div class="left">
                         <div class="l-outer">
                             <div class="l-inner">
-                                <div class="l-inner-inner">
-                                    CONNECTED INSIGHTS
+                                <div class="l-inner-inner" onclick=LeftToggle()>
+                                    <div class="lii-more" id="liim">
+                                        <p>CONNECTED INSIGHTS
+                                        </p>
+                                        <div id="leftMore" class="not-active">+</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
+                        <div class="tooltip" id="tp1">
+                            <span class="tooltiptext">
+                                <div class="tt">
+                                    <p>
+                                    Leverage the full power of connected data to uncover deeper insights on behavior,
+                                    preferences and trends On-demand and at lightning speed to better serve and delight
+                                    your customers.
+                                    </p>
+                                </div>
+                            </span>
+                        </div>
                         <div class="learn-more">
                             <div class="name">SUPPLY CHAIN</div>
                             <div class="goto-container">
-                                <a class="goto" href="">
+                                <a class="goto" href="https://www.symphonyretailai.com/supply-chain/">
                                     <p>LEARN MORE</p> <img src="./assets/images/east.svg" alt="">
                                 </a>
                             </div>
@@ -79,7 +93,7 @@
                         <div class="learn-more">
                             <div class="name">STORE INTELLIGENCE</div>
                             <div class="goto-container">
-                                <a class="goto" href="">
+                                <a class="goto" href="https://www.symphonyretailai.com/cpg/">
                                     <p>LEARN MORE</p> <img src="./assets/images/east.svg" alt="">
                                 </a>
                             </div>
@@ -87,10 +101,23 @@
 
                         <div class="r-outer">
                             <div class="r-inner">
-                                <div class="r-inner-inner">
-                                    CONNECTED AVAILABILITY
+                                <div class="r-inner-inner" onclick=RightToggle()>
+                                    <div class="rii-more" id="riim">
+                                        <p>CONNECTED AVAILABILITY
+                                        </p>
+                                        <div id="rightMore" class="not-active">+</div>
+                                    </div>
                                 </div>
                             </div>
+                        </div>
+                        <div class="tooltip tooltip2" id="tp2">
+                            <span class="tooltiptext">
+                                <div class="tt">
+                                    <p>
+                                    Holistic, real-time view of availability across all channels and locations physical and digital integration to ensure customers find the products they seek wherever and however they prefer to shop.
+                                    </p>
+                                </div>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -98,15 +125,24 @@
                 <div class="learn-more">
                     <div class="name">CUSTOMER-CENTRIC RETAILING</div>
                     <div class="goto-container">
-                        <a class="goto" href="">
+                        <a class="goto" href="https://www.symphonyretailai.com/revenue-growth/">
                             <p>LEARN MORE</p> <img src="./assets/images/east.svg" alt="">
                         </a>
                     </div>
                 </div>
+                <div class="tooltip tooltip2" id="tp3">
+                    <span class="tooltiptext">
+                        <div class="tt">
+                            <p>
+                            Holistic, real-time view of availability across all channels and locations physical and digital integration to ensure customers find the products they seek wherever and however they prefer to shop.
+                            </p>
+                        </div>
+                    </span>
+                </div>
 
             </div>
 
-            <div class="hero-bot-outer">
+            <div class="hero-bot-outer" onmouseover="document.getElementById('tp3').style.display='block'" onmouseout="document.getElementById('tp3').style.display='none'">
                 <div class="hero-bot-inner">
                     <p>CONNECTED RETAIL</p>
                     <h2>GENERATIVE AI</h2>
@@ -198,6 +234,49 @@
             </div>
         </div>
     </div> -->
+
+    <script>
+        function LeftToggle() {
+            var leftMore = document.getElementById("leftMore");
+            var liim = document.getElementById("liim");
+            var tp1 = document.getElementById("tp1");
+            if (leftMore.className == 'not-active') {
+                leftMore.className = 'active';
+                leftMore.innerText = '-';
+                tp1.style.visibility = 'visible';
+            }
+            else {
+                leftMore.className = 'not-active';
+                leftMore.innerText = '+';
+                tp1.style.visibility = 'hidden';
+            }
+        }
+
+        function RightToggle() {
+            var rightMore = document.getElementById("rightMore");
+            var riim = document.getElementById("riim");
+            var tp2 = document.getElementById("tp2");
+            if (rightMore.className == 'not-active') {
+                rightMore.className = 'active';
+                rightMore.innerText = '-';
+                tp2.style.visibility = 'visible';
+            }
+            else {
+                rightMore.className = 'not-active';
+                rightMore.innerText = '+';
+                tp2.style.visibility = 'hidden';
+            }
+
+            //    if (leftMore.style.display=='none'){
+            //     leftMore.style.display='block';
+            //     liim.style.height='84px';
+            //    }
+            //    else{
+            //     leftMore.style.display='none';
+            //     liim.style.height='64px';
+            //    }
+        }
+    </script>
 </body>
 
 </html>
